@@ -1,9 +1,3 @@
 node_modules/
-*.db
-*.png
-*.jpg
-*.svg
-assets/
 *.json
 test.cjs
-*.otf
