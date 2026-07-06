@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🍕 Order Dashboard</h1>
+        <button id="subscribe" onclick="initPush()">Enable Notification</button>
+        <button id="unsubscribe" onclick="unsubscribePush()" hidden>Unsubscribe</button><br>
+        <div id="ordersList" class="orders"></div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+
+            <h2>Order Details</h2>
+
+            <div id="orderDetails"></div>
+
+            <button id="markDoneBtn" class="hidden">✅ Mark as Done</button>
+            <button id="closeModal">Close</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

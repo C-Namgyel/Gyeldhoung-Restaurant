@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyeldhoung General Shop Billing</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/logo.svg" type="image/svg">
+</head>
+
+<body>
+    <header>
+        <h1>Gyeldhoung App</h1>
+    </header>
+
+    <!-- Fullscreen Loading Overlay -->
+    <div class="overlay" id="loadingOverlay">
+        <div id="loadingText" class="loader-box">Loading..</div>
+    </div>
+
+    <!-- Snackbar -->
+    <div class="snackbar" id="snackbar">Done</div>
+
+    <div id="screenContainer">
+        <!-- Grocery Billing -->
+        <div class="scrn active" id="groceryScrn">
+            <label>Product Code: </label>
+            <input autocomplete="off" autocomplete="off" id="groceryCode" type="number"><br>
+            <label>Product: </label>
+            <div class="searchable-dropdown-container">
+                <input autocomplete="off" autocomplete="off" type="text" id="groceryItems" placeholder="--Select Item--" class="searchable-dropdown-input autocomplete="off" autocomplete="off"">
+                <div id="groceryItemsDropdown" class="searchable-dropdown-list" style="display: none;"></div>
+            </div><br>
+            <input autocomplete="off" autocomplete="off" hidden id="customItemName" type="text" placeholder="Item Name">
+            <input autocomplete="off" autocomplete="off" hidden id="customItemRate" type="number" placeholder="Rate"><br>
+            <label>Quantity: </label>
+            <input autocomplete="off" autocomplete="off" type="number" id="groceryQuantity" min="1" value="1">
+            <a>Auto <input autocomplete="off" autocomplete="off" type="checkbox" id="groceryAuto" checked></a><br>
+            <button class="btn" onclick="addGroceryItem()">Add Item</button>
+            <div class="tableDiv">
+                <table id="groceryTable">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Sub Total</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="groceryBody">
+                    </tbody>
+                    <tfoot>
+                        <tr class="totalRow">
+                            <td colspan="4">Total</td>
+                            <td id="groceryTotal">0</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <button id="groceryPrint" class="smallBtn">Print Bill</button><br>
+            <label>Payment: </label>
+            <select name="groceryPayment" id="groceryPayment">
+                <option hidden selected value="">--Select--</option>
+                <option>Cash</option>
+                <option>Online</option>
+                <option>Credit</option>
+                <option>Restaurant</option>
+            </select><br>
+            <label>Received Amount: </label>
+            <input autocomplete="off" autocomplete="off" type="number" id="groceryReceived"><br>
+            <label id="groceryChange">Change: </label>
+            <button class="btn" onclick="submitGroceryBill()">Submit</button>
+        </div>
+
+        <!-- Grocery Item Edit -->
+        <div class="scrn" id="groceryListEditScrn">
+            <label>Item Code:</label>
+            <input autocomplete="off" type="number" id="groceryItemCode"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemName').focus(); event.preventDefault();}"><br>
+            <button id="groceryGenerateBtn" class="smallBtn" onclick="generateItemCode();">Generate Code</button><br>
+            <label>Item Name:</label>
+            <input autocomplete="off" type="text" id="groceryItemName"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemRate').focus(); event.preventDefault();}"><br>
+            <label>Item Rate:</label>
+            <input autocomplete="off" type="number" id="groceryItemRate"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemSaveBtn').click(); event.preventDefault();}"><br>
+            <label>In Shop: </label>
+            <input autocomplete="off" type="checkbox" id="groceryItemShop"><br>
+            <label>In Store: </label>
+            <input autocomplete="off" type="checkbox" id="groceryItemStore"><br>
+            <button class="btn" id="groceryItemSaveBtn">Save</button>
+            <button class="btn" id="groceryItemSaveBtn">Back</button>
+        </div>
+
+        <!-- Credit Adding -->
+        <div class="scrn" id="creditScrn">
+            <label>CID Number: </label>
+            <input autocomplete="off" autocomplete="off" type="number" id="creditCidNumber" placeholder="CID Number"><br>
+            <label>Phone Number: </label>
+            <input autocomplete="off" autocomplete="off" type="number" id="creditPhoneNumber" placeholder="Phone Number"><br>
+            <label>Name: </label>
+            <input autocomplete="off" autocomplete="off" type="text" id="creditName" placeholder="Name"><br>
+            <label>Amount: </label>
+            <input autocomplete="off" autocomplete="off" type="number" id="creditAmount" placeholder="Amount"><br>
+            <button class="btn" onclick="addCredit()">Add Credit</button>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script> -->
+    <script src="./functions.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

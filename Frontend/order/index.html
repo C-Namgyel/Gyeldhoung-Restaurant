@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gyeldhoung Orders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>🍕 Gyeldhoung Orders</h1>
+      <p>Fresh Pizza & Cakes delivered with love</p>
+    </header>
+
+    <!-- ORDER FORM -->
+    <form id="orderForm">
+
+      <!-- CUSTOMER INFO -->
+      <section class="card">
+        <h2>👤 Customer Info</h2>
+
+        <div class="input-group">
+          <label>Full Name *</label>
+          <input maxlength="25" type="text" id="name" name="name" placeholder="Enter your name (Max: 25 Chars)" required />
+        </div>
+
+        <div class="input-group">
+          <label>Phone Number *</label>
+          <input maxlength="8" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+        </div>
+      </section>
+
+      <!-- ORDER TYPE -->
+      <section class="card">
+        <h2>🛒 Order Type *</h2>
+
+        <div class="input-group">
+          <label>Select Item</label>
+          <select id="orderType" name="order" required>
+            <option value="" hidden>-- Choose --</option>
+            <option value="Pizza">🍕 Pizza</option>
+            <option value="Cake">🎂 Cake</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- PIZZA SECTION -->
+      <section id="pizzaSection" class="card hidden">
+        <h2>🍕 Pizza Details</h2>
+
+        <div class="input-group">
+          <label>Size *</label>
+          <select id="pizzaSize" class="pizza" name="pizza-size">
+            <option value="" hidden>-- Choose --</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Flavor *</label>
+          <select id="pizzaFlavor" class="pizza" name="pizza-flavor">
+            <option value="" hidden>-- Choose --</option>
+            <option value="Veg">Veg</option>
+            <option value="Beef">Beef</option>
+            <option value="Chicken">Chicken</option>
+          </select>
+        </div>
+
+        <p class="note">🥤 Every pizza comes with a free Coke</p>
+      </section>
+
+      <!-- CAKE SECTION -->
+      <section id="cakeSection" class="card hidden">
+        <h2>🎂 Cake Details</h2>
+
+        <div class="input-group">
+          <label>Size *</label>
+          <select id="cakeSize" class="cake" name="cake-size">
+            <option value="" hidden>-- Choose --</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Message on Cake *</label>
+          <textarea id="cakeMessage" class="cake" rows="4" placeholder="Write something sweet..." name="cake-message"></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Sample</label>
+          <input type="file" id="cakeSample" name="cake-sample" accept="image/*" />
+          <img id="cakeSamplePreview" class="preview hidden" />
+        </div>
+      </section>
+
+      <!-- TAKEAWAY -->
+      <section id="takeawaySection" class="card hidden">
+        <h2>🛍️ Takeaway</h2>
+
+        <label class="checkbox">
+          <input type="checkbox" id="takeaway" name="takeaway" class="takeaway"/>
+          Add takeaway packaging (+Nu. 20)
+        </label>
+      </section>
+
+      <!-- PAYMENT SCREENSHOT -->
+      <section id="paymentSection" class="card hidden">
+        <h2>💳 Payment Screenshot</h2>
+
+        <input type="file" id="paymentProof" name="payment" accept="image/*" />
+        <img id="preview" class="preview hidden" />
+      </section>
+
+      <!-- EXTRA INSTRUCTIONS -->
+      <section id="instructionsSection" class="card hidden">
+        <h2>📝 Extra Instructions</h2>
+
+        <div>
+          <textarea id="instruction" name="instruction" type="text" class="instruction" placeholder="Add instruction..."></textarea>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section id="summarySection" class="card summary hidden">
+        <h2>📋 Order Summary</h2>
+        <div id="summaryBox">
+          <p>Fill the form to see summary</p>
+        </div>
+      </section>
+
+      <!-- SUBMIT -->
+      <button id="submitBtn" type="submit" class="submit-btn hidden">
+        🚀 Place Order
+      </button>
+
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

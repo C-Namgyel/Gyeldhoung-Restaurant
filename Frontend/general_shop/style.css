@@ -51,32 +51,6 @@ header {
     z-index: 999;
 }
 
-.floatingWindow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 2px solid #333;
-    border-radius: 8px;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
-}
-
-#backBtn {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    display: none;
-    cursor: pointer;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
-}
-
 body.show-back #backBtn {
     display: block
 }
@@ -157,7 +131,6 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(8, 52, 72, 0.08);
 }
-
 .iconBtn {
     display: inline-block;
     padding: 6px 8px;
@@ -322,21 +295,6 @@ td {
 .creditCheckbox {
     transform: scale(1.05);
     margin-left: 8px
-}
-
-/* Restaurant specific helper */
-.restaurant-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    margin: 8px 0
-}
-
-.table-actions {
-    display: flex;
-    gap: 8px;
-    justify-content: center
 }
 
 /* Responsive */

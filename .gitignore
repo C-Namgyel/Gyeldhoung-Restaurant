@@ -1,9 +1,9 @@
 node_modules/
+Dump Folder/
+uploads/
 *.db
-*.png
-*.jpg
-*.svg
-assets/
 *.json
 test.cjs
-*.otf
+temp.js
+tempServer.js
+*.env

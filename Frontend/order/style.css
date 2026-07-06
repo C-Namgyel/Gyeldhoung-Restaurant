@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff7ed, #fff1f2);
+  color: #2b2b2b;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #e11d48;
+}
+
+.header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+/* INPUTS */
+.input-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #e11d48;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+}
+
+/* HIDDEN SECTIONS */
+.hidden {
+  display: none;
+}
+
+/* NOTE */
+.note {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+input.takeaway {
+  all: revert;
+}
+
+/* IMAGE PREVIEW */
+.preview {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+}
+
+#addInstruction {
+  margin-top: 10px;
+  background: #f43f5e;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#addInstruction:hover {
+  background: #e11d48;
+}
+
+/* SUMMARY */
+.summary {
+  background: #fff;
+}
+
+#summaryBox {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #e11d48, #fb7185);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 14px;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.3);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
