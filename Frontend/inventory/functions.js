@@ -1,10 +1,10 @@
 const domain = "gyeldhoung.com";
-function api(path, domain) {
-  return `http://localhost:8080${path}`;
-}
-// function api(path) {
-//   return `https://api.${domain}${path}`;
+// function api(path, domain) {
+//   return `http://localhost:8080${path}`;
 // }
+function api(path) {
+  return `https://api.${domain}${path}`;
+}
 function showLoading(text) {
     loadingOverlay.classList.add("show");
     loadingText.textContent = text;
