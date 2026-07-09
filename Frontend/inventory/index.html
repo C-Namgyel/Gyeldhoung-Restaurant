@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyeldhoung General Shop Billing</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/logo.svg" type="image/svg">
+</head>
+
+<body>
+    <header>
+        <h1>Gyeldhoung App</h1>
+    </header>
+
+    <!-- Fullscreen Loading Overlay -->
+    <div class="overlay" id="loadingOverlay">
+        <div id="loadingText" class="loader-box">Loading..</div>
+    </div>
+
+    <!-- Snackbar -->
+    <div class="snackbar" id="snackbar">Done</div>
+
+    <div id="screenContainer">
+        <!-- Grocery List -->
+        <div class="scrn" id="groceryListScrn">
+            <input autocomplete="off" onkeyup="grocerySearch()" type="text" id="grocerySearchInput" placeholder="Search Item..."
+                style="width: 100%;">
+            <button class="btn" onclick="addNewGroceryItem();">Add New Item</button>
+            <div class="tableDiv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Code</th>
+                            <th>Item</th>
+                            <th>Rate</th>
+                            <th>Stock</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="groceryListBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Grocery Item Edit -->
+        <div class="scrn" id="groceryListEditScrn">
+            <label>Item Code:</label>
+            <input autocomplete="off" type="number" id="groceryItemCode"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemName').focus(); event.preventDefault();}"><br>
+            <button id="groceryGenerateBtn" class="smallBtn" onclick="generateItemCode();">Generate Code</button><br>
+            <label>Item Name:</label>
+            <input autocomplete="off" type="text" id="groceryItemName"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemRate').focus(); event.preventDefault();}"><br>
+            <label>Item Rate:</label>
+            <input autocomplete="off" type="number" id="groceryItemRate"
+                onkeydown="if(event.key==='Enter'){document.getElementById('groceryItemSaveBtn').click(); event.preventDefault();}"><br>
+            <label>In Shop: </label>
+            <input autocomplete="off" type="checkbox" id="groceryItemShop"><br>
+            <label>In Store: </label>
+            <input autocomplete="off" type="checkbox" id="groceryItemStore"><br>
+            <button class="btn" id="groceryItemSaveBtn">Save</button>
+            <button class="btn" onclick="setScreen('groceryListScrn')">Back</button>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script> -->
+    <script src="./functions.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

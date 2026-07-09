@@ -32,6 +32,7 @@ app.use("/api/general_shop", require("./api/general_shop.route"));
 app.use("/api/sales", require("./api/sales.route"));
 app.use("/api/credits", require("./api/credits.route"));
 app.use("/api/order", require("./api/order.route"));
+app.use("/api/inventory", require("./api/inventory.route"));
 app.get("/", (req, res) => {
   res.status(403).send("API access not allowed via browser");
 });
