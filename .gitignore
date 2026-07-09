@@ -2,6 +2,7 @@ node_modules/
 Dump Folder/
 uploads/
 *.db
+items.db
 *.json
 test.cjs
 temp.js

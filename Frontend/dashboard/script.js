@@ -163,7 +163,7 @@ async function openOrder(id) {
                 <p><b>Takeaway:</b> ${order.takeaway ? "Yes" : "No"}</p>
                 <p><b>Instructions:</b> ${order.instruction ? "Yes" : "No"}</p>
                 <p><b>Payment:</b><br>${order.payment
-                        ? `<img class="order-image" src="${imageSrc}/uploads/${order.payment}  onclick="window.open(this.src, \'_blank\')">`
+                        ? `<img class="order-image" src="${imageSrc}/uploads/${order.payment}" onclick="window.open(this.src, \'_blank\')">`
                         : "<i>Not uploaded</i>"
                     }</p>
                 <p><b>Status:</b> ${order.status}</p>

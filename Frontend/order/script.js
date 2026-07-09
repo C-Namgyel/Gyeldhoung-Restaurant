@@ -170,9 +170,10 @@ orderType.addEventListener("change", updateSummary);
 // ===== FORM SUBMIT =====
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
+  document.getElementById("submitBtn").disabled = true;
+  document.getElementById("submitBtn").innerHTML = "Submitting...";
   const formData = new FormData(event.target);
-  
+
   const uploadData = new FormData();
   uploadData.append("name", formData.get("name"))
   uploadData.append("phone", formData.get("phone"))
@@ -193,10 +194,17 @@ form.addEventListener("submit", (event) => {
     method: "POST",
     body: uploadData
   })
-  .then(res => res.json())
-  .then(res => {
-    if (!res.success) console.log(res.error)
-  })
+    .then(res => res.json())
+    .then(res => {
+      if (res.success) {
+        alert("Order Successfully Submitted");
+        location.reload();
+      } else {
+        alert("Order Submit Failed");
+        console.log(res.error)
+      }
+
+    })
 
   // alert("Order placed successfully 🚀");
 });

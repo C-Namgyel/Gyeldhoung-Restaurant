@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyeldhoung General Shop Billing</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/logo.svg" type="image/svg">
+</head>
+
+<body>
+    <header>
+        <h1>Gyeldhoung App</h1>
+    </header>
+
+    <!-- Fullscreen Loading Overlay -->
+    <div class="overlay" id="loadingOverlay">
+        <div id="loadingText" class="loader-box">Loading..</div>
+    </div>
+
+    <!-- Snackbar -->
+    <div class="snackbar" id="snackbar">Done</div>
+
+    <div id="screenContainer">
+        <!-- Income Screen -->
+        <div class="scrn active" id="incomeScrn">
+            <label>Date: <input autocomplete="off" type="date" id="incomeDate"></label>
+            <button id="incomeBtn" class="smallBtn">Retrive</button>
+            <div class="tableDiv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Amount</th>
+                            <th>Payment</th>
+                            <th>Source</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incomeBody">
+                    </tbody>
+                    <tfoot>
+                        <tr class="totalRow">
+                            <td colspan="3">Total</td>
+                            <td id="incomeTotal">0</td>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tfoot>
+                </table><br>
+                <label id="incomeSummary"></label><br>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script> -->
+    <script src="./functions.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

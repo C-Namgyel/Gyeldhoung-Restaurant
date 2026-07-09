@@ -5,172 +5,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Gyeldhoung Restaurant in Samtse, Bhutan. Buffet, fast food, drinks, and cozy dining experience at Upper Panbari, Tading Gewog.">
-    <meta name="keywords" content="Gyeldhoung Restaurant, restaurant in Samtse, Bhutan buffet, fast food Bhutan">
-    <title>Gyeldhoung Restaurant</title>
-    <link rel="icon" href="./logo.svg" type="image/svg">
+        content="Gyeldhoung in Upper Panbari, Samtse, Bhutan. Find branch information, restaurant menu, general shop details, snooker updates, and online ordering.">
+    <meta name="keywords"
+        content="Gyeldhoung, Gyeldhoung Samtse, Upper Panbari, Tading Gewog, Gyeldhoung Restaurant, general shop Samtse, Bhutan food ordering">
+    <title>Gyeldhoung Branch | Upper Panbari, Samtse</title>
+    <link rel="icon" href="./logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./style.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Restaurant",
-            "name": "Gyeldhoung Restaurant",
+            "@type": "LocalBusiness",
+            "name": "Gyeldhoung Branch",
             "address": {
-                "@type": "22001",
+                "@type": "PostalAddress",
+                "streetAddress": "Upper Panbari, Tading Gewog",
                 "addressLocality": "Samtse",
                 "addressCountry": "Bhutan"
             },
-            "servesCuisine": ["Buffet", "Fast Food", "Bhutanese"],
-            "telephone": "+97517840827"
+            "telephone": "+97517840827",
+            "url": "https://gyeldhoung.com",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=100067832073532"
+            ],
+            "department": [
+                {
+                    "@type": "Restaurant",
+                    "name": "Gyeldhoung Restaurant",
+                    "servesCuisine": ["Bhutanese", "Buffet", "Fast Food"]
+                },
+                {
+                    "@type": "Store",
+                    "name": "Gyeldhoung General Shop"
+                }
+            ]
         }
     </script>
 </head>
 
 <body>
-
     <header class="navbar">
-        <div class="logo">
-            <img src="./logo.svg" alt="logo">
-            <h1>Gyeldhoung Restaurant</h1>
-        </div>
+        <a class="brand" href="#home" aria-label="Gyeldhoung home">
+            <img src="./logo.svg" alt="Gyeldhoung logo">
+            <span>Gyeldhoung</span>
+        </a>
 
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
+        <!-- Add new branch links here as you create new sections below. -->
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#restaurant">Restaurant</a>
+            <a href="#shop">General Shop</a>
+            <a href="#snooker">Snooker</a>
             <a href="#contact">Contact</a>
+            <a class="order-link" href="https://order.gyeldhoung.com">Order</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="./logo.svg" alt="Gyeldhoung logo" class="hero-logo">
+                <p class="eyebrow">Upper Panbari, Tading Gewog, Samtse</p>
+                <h1>Gyeldhoung Branch</h1>
+                <p class="hero-copy">
+                    A local stop for food, daily essentials, friendly service, and more branch services as they grow.
+                </p>
+                <div class="hero-actions">
+                    <!-- <a class="button primary" href="https://order.gyeldhoung.com">Order Food</a> -->
+                    <a class="button secondary" href="#restaurant">View Restaurant</a>
+                </div>
+            </div>
+        </section>
 
-            <img src="./logo.svg" alt="Gyeldhoung Logo" class="hero-logo">
-
-            <h2>Fresh Food. Warm Place. Good Vibes.</h2>
-            <p>Buffet • Fast Food • Drinks • Cozy Dining</p>
-
-        </div>
-    </section>
-
-    <section id="about" class="section reveal">
-        <h2>Welcome</h2>
-
-        <div class="image-box">
-            <img src="./pic.jpg" alt="restaurant">
-        </div>
-
-        <p>
-            Gyeldhoung Restaurant is located in Upper Panbari, Tading Gewog, Samtse Dzongkhag, offering a comfortable
-            and
-            welcoming dining experience for locals and travelers alike.<br><br>
-            We operate a buffet system that gives customers the flexibility to choose how much they want to eat and what
-            dishes they prefer, ensuring both satisfaction and value. Alongside our buffet, we also serve a variety of
-            fast food items, which can be ordered directly through our attentive waiters.<br><br>
-            For added convenience, a general shop is located right beside the restaurant, where customers can purchase
-            daily necessities and essential items.<br><br>
-            At Gyeldhoung Restaurant, we focus on quality food, flexibility, and customer comfort, making it an ideal
-            place for casual meals, family dining, and group visits.
-        </p>
-
-        <div class="info-grid">
-            <div class="info-card">⏰ 7 AM - 10 PM</div>
-            <div class="info-card">📍 Samtse, Bhutan</div>
-            <div class="info-card">🍽 Buffet + Fast Food</div>
-        </div>
-
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
-    </section>
-
-    <section id="menu" class="section reveal">
-        <h2>Menu</h2>
-
-        <div class="menu-grid">
-
-            <!-- FAST FOOD -->
-            <div class="card">
-                <h3>🍜 Fast Food</h3>
-                <p>Veg Momo <span>50</span></p>
-                <p>Non-Veg Momo <span>70</span></p>
-                <p>Veg Fried Rice <span>100</span></p>
-                <p>Non-Veg Fried Rice <span>150</span></p>
-                <p>Puri <span>100</span></p>
-                <p>Veg Thukpa <span>80</span></p>
-                <p>Non-Veg Thukpa <span>100</span></p>
-                <p>Veg Chowmein <span>100</span></p>
-                <p>Non-Veg Chowmein <span>150</span></p>
-                <p>Bathup <span>80</span></p>
-                <p>Veg Koka <span>100</span></p>
-                <p>Chicken Koka <span>100</span></p>
-                <p>Egg Koka <span>130</span></p>
-                <p>Koka Chowmein <span>150</span></p>
-                <p>Maggi <span>50</span></p>
-                <p>Egg Maggi <span>80</span></p>
-                <p>Spicy Noodles <span>150</span></p>
+        <section class="section intro reveal" aria-labelledby="about-title">
+            <div>
+                <p class="eyebrow">About the area</p>
+                <h2 id="about-title">A convenient branch for locals and travellers</h2>
             </div>
 
-            <!-- DRINKS -->
-            <div class="card">
-                <h3>☕ Drinks</h3>
-                <p>Milk Tea <span>25</span></p>
-                <p>Milk Coffee <span>50</span></p>
-                <p>Suja <span>30</span></p>
-                <p>Black Tea <span>20</span></p>
-                <p>Black Coffee <span>30</span></p>
-                <p>Lemon Tea <span>50</span></p>
-                <p>Green Tea <span>50</span></p>
+            <div class="intro-grid">
+                <div class="image-box">
+                    <img src="./pic.jpg" alt="Gyeldhoung Restaurant building and dining area">
+                </div>
+
+                <div class="intro-text">
+                    <p>
+                        Gyeldhoung is located in Upper Panbari, Tading Gewog, Samtse Dzongkhag. The branch brings
+                        together the restaurant, nearby general shop, and other services so visitors can quickly find
+                        what they need in one place.
+                    </p>
+                    <p>
+                        The restaurant serves buffet meals, fast food, curries, tea, coffee, and drinks. The general
+                        shop beside it is useful for daily necessities and essential items. More branch details can be
+                        added here as new services become available.
+                    </p>
+                </div>
             </div>
 
-            <!-- BUFFET -->
-            <div class="card">
-                <h3>🍛 Buffet Rice</h3>
-                <p>Non-Veg <span>280</span></p>
-                <p>Veg <span>200</span></p>
+            <div class="info-grid">
+                <article class="info-card">
+                    <span>Hours</span>
+                    <strong>7 AM - 10 PM</strong>
+                </article>
+                <article class="info-card">
+                    <span>Location</span>
+                    <strong>Upper Panbari, Samtse</strong>
+                </article>
+                <article class="info-card">
+                    <span>Main services</span>
+                    <strong>Restaurant, Shop, Snooker</strong>
+                </article>
+            </div>
+        </section>
+
+        <section id="restaurant" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Restaurant</p>
+                <h2>Buffet, fast food, curries, and drinks</h2>
+                <p>
+                    Choose buffet rice for a full meal or order fast food and drinks directly. Online food ordering is
+                    available through the Gyeldhoung order site.
+                </p>
             </div>
 
-            <!-- CURRY -->
-            <div class="card">
-                <h3>🍲 Curry</h3>
-                <p>Chicken Curry</p>
-                <p>Chicken Chilli</p>
-                <p>Chicken Pa</p>
-                <p>Fish Curry</p>
-                <p>Fish Maru</p>
-                <p>Beef Curry</p>
-                <p>Beef Chilli</p>
-                <p>Beef Pa</p>
-                <p>Beef Goep</p>
-                <p>Beef Maru</p>
-                <p>Shakam Datsi</p>
-                <p>Mutton Curry</p>
-                <p>Egg Curry</p>
-                <p>Ema Datsi</p>
-                <p>Kewa Datsi</p>
-                <p>Mushroom Datsi</p>
-                <p>Beans Datsi</p>
-                <p>Saag Datsi</p>
+            <div class="feature-row">
+                <!-- <a class="button primary" href="https://order.gyeldhoung.com">Open Ordering Site</a> -->
+                <a class="button secondary" href="#menu">See Menu</a>
             </div>
 
-        </div>
-    </section>
+            <div id="menu" class="menu-grid">
+                <!-- Fast food menu. Update item names and prices here. -->
+                <article class="card">
+                    <h3>Fast Food</h3>
+                    <p>Veg Momo <span>50</span></p>
+                    <p>Non-Veg Momo <span>70</span></p>
+                    <p>Veg Fried Rice <span>100</span></p>
+                    <p>Non-Veg Fried Rice <span>150</span></p>
+                    <p>Puri <span>100</span></p>
+                    <p>Veg Thukpa <span>80</span></p>
+                    <p>Non-Veg Thukpa <span>100</span></p>
+                    <p>Veg Chowmein <span>100</span></p>
+                    <p>Non-Veg Chowmein <span>150</span></p>
+                    <p>Bathup <span>80</span></p>
+                    <p>Veg Koka <span>100</span></p>
+                    <p>Chicken Koka <span>100</span></p>
+                    <p>Egg Koka <span>130</span></p>
+                    <p>Koka Chowmein <span>150</span></p>
+                    <p>Maggi <span>50</span></p>
+                    <p>Egg Maggi <span>80</span></p>
+                    <p>Spicy Noodles <span>150</span></p>
+                </article>
 
-    <section id="contact" class="section reveal">
-        <h2>Contact</h2>
+                <article class="card">
+                    <h3>Drinks</h3>
+                    <p>Milk Tea <span>25</span></p>
+                    <p>Milk Coffee <span>50</span></p>
+                    <p>Suja <span>30</span></p>
+                    <p>Black Tea <span>20</span></p>
+                    <p>Black Coffee <span>30</span></p>
+                    <p>Lemon Tea <span>50</span></p>
+                    <p>Green Tea <span>50</span></p>
+                </article>
 
-        <div class="contact-card">
-            <p>📞 +975 17840827 / 77355261</p>
-            <p>📧 pinkey123@gmail.com</p>
-            <a href="https://www.facebook.com/profile.php?id=100067832073532">Facebook</a>
-        </div>
-    </section>
+                <article class="card">
+                    <h3>Buffet Rice</h3>
+                    <p>Non-Veg <span>280</span></p>
+                    <p>Veg <span>200</span></p>
+                </article>
+
+                <article class="card">
+                    <h3>Curry</h3>
+                    <p>Chicken Curry</p>
+                    <p>Chicken Chilli</p>
+                    <p>Chicken Pa</p>
+                    <p>Fish Curry</p>
+                    <p>Fish Maru</p>
+                    <p>Beef Curry</p>
+                    <p>Beef Chilli</p>
+                    <p>Beef Pa</p>
+                    <p>Beef Goep</p>
+                    <p>Beef Maru</p>
+                    <p>Shakam Datsi</p>
+                    <p>Mutton Curry</p>
+                    <p>Egg Curry</p>
+                    <p>Ema Datsi</p>
+                    <p>Kewa Datsi</p>
+                    <p>Mushroom Datsi</p>
+                    <p>Beans Datsi</p>
+                    <p>Saag Datsi</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="shop" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">General Shop</p>
+                <h2>Daily essentials beside the restaurant</h2>
+                <p>
+                    The shop helps customers pick up basic goods, household items, snacks, and other everyday needs
+                    while visiting the branch.
+                </p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Daily goods</h3>
+                    <p>Essential items for local families, travellers, and restaurant visitors.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Snacks and drinks</h3>
+                    <p>Quick items to carry home, take on the road, or enjoy nearby.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Convenient stop</h3>
+                    <p>Restaurant and shop services are close together for easier visits.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="snooker" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Snooker</p>
+                <h2>Snooker</h2>
+                <p>
+                    This branch also has snooker. More details about availability, prices, and opening hours will be
+                    shared here soon.
+                </p>
+            </div>
+
+            <!-- Later: add table count, hourly rate, booking contact, photos, and tournament notices. -->
+            <div class="coming-soon">
+                <strong>Coming soon:</strong>
+                <span>Snooker information will be updated after the details are confirmed.</span>
+            </div>
+        </section>
+
+        <section id="contact" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Contact</p>
+                <h2>Visit or get in touch</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <p><span>Phone</span> +975 17840827 / 77355261</p>
+                    <p><span>Email</span> pinkey123@gmail.com</p>
+                    <p><span>Location</span> Upper Panbari, Tading Gewog, Samtse Dzongkhag</p>
+                    <a href="https://www.facebook.com/profile.php?id=100067832073532">Facebook Page</a>
+                </div>
+
+                <div class="map-card">
+                    <h3>Map</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.2567566573553!2d89.2501522760009!3d26.89534536083565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3cf4853fe97ab%3A0x81333baa9031990d!2sGyeldhoung%20Restaurant!5e0!3m2!1sen!2sbt!4v1783350347875!5m2!1sen!2sbt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <p>
+                        The branch is located in Upper Panbari, Tading Gewog, Samtse Dzongkhag.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 Gyeldhoung Restaurant</p>
+        <p>© 2026 Gyeldhoung Branch. Upper Panbari, Samtse.</p>
     </footer>
 
     <script defer src="./script.js"></script>

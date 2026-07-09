@@ -22,14 +22,16 @@ const navLinks = document.querySelector("nav");
 
 if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-        navToggle.classList.toggle("active");
+        const isOpen = navLinks.classList.toggle("open");
+        navToggle.classList.toggle("active", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     document.querySelectorAll("nav a").forEach((link) => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("open");
             navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
         });
     });
 }

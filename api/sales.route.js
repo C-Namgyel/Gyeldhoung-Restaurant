@@ -5,6 +5,17 @@ loadEnvFile('./.env');
 
 const db = require("../db");
 
+router.get('/get', (req, res) => {
+  const { start, end } = req.query;
+  try {
+    const rows = db.prepare(
+      'SELECT * FROM sales WHERE ts BETWEEN ? AND ?'
+    ).all(start, end);
+    res.json({ data: rows, success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message, success: false });
+  }
+})
 router.post('/add', (req, res) => {
   let data = req.body;
   const insertMany = db.transaction((data) => {
@@ -22,9 +33,14 @@ router.post('/add', (req, res) => {
   }
 });
 router.delete('/delete/:id', (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = req.params.id.split(',');
   try {
-    db.prepare('DELETE FROM sales WHERE id = ?').run(id);
+    const del = db.transaction(id => {
+      id.forEach(i => {
+        db.prepare('DELETE FROM sales WHERE id = ?').run(i);
+      })
+    })
+    del(id);
     res.json({ success: true });
   } catch (err) {
     console.error(err.message);
